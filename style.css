@@ -67,4 +67,66 @@ i{
     color: #219150 ;
 }
 
+#menu-btn{
+    display: none;
+}
 
+@media (max-width:1200px) {
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+        html {
+            font-size: 55% ;
+        }
+}
+
+@media (max-width:768px){
+    .header #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: fixed;
+        top: 0;
+        /* left: 0;  now*/
+        left: -110%;
+        background: #ffffff;
+        z-index: 1000;
+        width: 35rem;
+        height: 100%;
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, .8);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .header .navbar a{  
+            margin: 1rem 0;
+            font-size: 3rem;
+    }
+
+    .header .navbar #nav-close{
+         font-size: 4rem ;
+        position: absolute;
+        top: 1rem;
+         right: 2rem;
+    }
+
+    .header .navbar.active{
+         left: 0;
+         box-shadow: 0 0 0 100vh rgba(0, 0, 0, .8);
+       
+    }
+}
+
+
+@media (max-width:450px){
+     html{
+         font-size: 50%;
+     }
+}
